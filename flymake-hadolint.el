@@ -98,7 +98,9 @@ REPORT-FN is Flymake's callback function."
       (forward-line 1))
     diags))
 
+;;;###autoload
 (defun flymake-hadolint-setup ()
+  "Setup `flymake' to use `flymake-hadolint' buffer locally."
   (add-hook 'flymake-diagnostic-functions 'flymake-hadolint nil t))
 
 
