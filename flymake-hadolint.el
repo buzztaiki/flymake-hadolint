@@ -1,4 +1,4 @@
-;;; flymake-hadolint.el --- Flymake backend for hadolint  -*- lexical-binding: t; -*-
+;;; flymake-hadolint.el --- Flymake backend for hadolint, a Dockerfile linter  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022  Taiki Sugawara
 
@@ -36,7 +36,7 @@
 (defvar-local flymake-hadolint--proc nil)
 
 (defgroup flymake-hadolint nil
-  "Flymake backend for hadolint"
+  "Flymake backend for hadolint."
   :prefix "flymake-hadolint-"
   :group 'flymake)
 
