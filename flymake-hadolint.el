@@ -68,6 +68,9 @@ REPORT-FN is Flymake's callback function."
       (process-send-eof flymake-hadolint--proc))))
 
 (defun flymake-hadolint--process-sentinel (proc _event source report-fn)
+  "Sentinel of the `flymake-hadolint' process PROC for buffer SOURCE.
+
+REPORT-FN is Flymake's callback function."
   (when (eq 'exit (process-status proc))
     (unwind-protect
         (if (with-current-buffer source (eq proc flymake-hadolint--proc))
@@ -78,6 +81,7 @@ REPORT-FN is Flymake's callback function."
       (kill-buffer (process-buffer proc)))))
 
 (defun flymake-hadolint--collect-diagnostics (source)
+  "Collect diagnostics for buffer SOURCE."
   (let (diags)
     (while (not (eobp))
       (cond
