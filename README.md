@@ -1,4 +1,5 @@
 # flymake-hadolint
+[![MELPA](https://melpa.org/packages/flymake-hadolint-badge.svg)](https://melpa.org/#/flymake-hadolint)
 
 Flymake backend for hadolint, a Dockerfile linter.
 
