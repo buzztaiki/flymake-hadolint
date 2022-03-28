@@ -81,7 +81,7 @@ REPORT-FN is Flymake's callback function."
       (kill-buffer (process-buffer proc)))))
 
 (defun flymake-hadolint--collect-diagnostics (source)
-  "Collect diagnostics for buffer SOURCE."
+  "Collect diagnostics for buffer SOURCE from hadolint output in current buffer."
   (let (diags)
     (while (not (eobp))
       (cond
